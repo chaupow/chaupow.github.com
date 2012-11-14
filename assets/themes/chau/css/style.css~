@@ -18,7 +18,7 @@
 	top: 60%;
 	left: 15%;
 	border-left: 5px solid white;
-	padding-left: 10px;
+	padding-left: 15px;
 }
 
 .links {
