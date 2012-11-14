@@ -1,0 +1,11 @@
+---
+layout: page
+title: Huyen Chau Nguyen
+group: navigation
+---
+{% include JB/setup %}
+
+* computer science student
+* living in Karlsruhe, Germany
+* origin in Vietnam
+* singer (and dancer)

@@ -1,0 +1,5 @@
+---
+layout: chau
+---
+{% include JB/setup %}
+{% include themes/chau/post.html %}
