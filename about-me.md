@@ -8,4 +8,4 @@ group: navigation
 * computer science student
 * living in Karlsruhe, Germany
 * origin in Vietnam
-* singer (and dancer)
+* likes to sing (and dance)

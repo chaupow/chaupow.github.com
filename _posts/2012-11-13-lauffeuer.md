@@ -45,9 +45,9 @@ Here are some articles, presentations and documents about Lauffeuer that might i
 * See our [demonstration video](http://www.youtube.com/watch?v=e8CByZDHHGg) (en)
 * **Watch our [presentation](http://www.youtube.com/watch?v=u6wSHh9P3-s&feature=plcp) at university (de)**
 * Read [two](http://www.informatik.kit.edu/309_6190.php) [articles](http://www.informatik.kit.edu/309_6483.php) written by our university KIT (en/de)
-* Read our [exposé](/assets/docs/lauffeuer-expose) for Zukunftspreis Kommunikation (de)
-* Read our [functional specs](/assets/docs/lauffeuer-pflichtenheft) (de)
-* Read our [design specs](/assets/docs/lauffeuer-entwurfsdokument) (de)
+* Read our [exposé](/assets/docs/lauffeuer-expose.pdf) for Zukunftspreis Kommunikation (de)
+* Read our [functional specs](/assets/docs/lauffeuer-pflichtenheft.pdf) (de)
+* Read our [design specs](/assets/docs/lauffeuer-entwurfsdokument.pdf) (de)
 
 If there's anything else you're interested in write us an email! We still have lots of presentation slide, documents, etc.
 

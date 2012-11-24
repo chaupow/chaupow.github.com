@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Huyen Chau Nguyen
+title: About me
 group: navigation
 ---
 {% include JB/setup %}

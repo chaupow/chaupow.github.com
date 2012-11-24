@@ -35,7 +35,7 @@
 .page-header-post {
     height: 220px;
     position: relative;
-    background-image: url('img/pattern.png');
+    /*background-image: url('img/pattern.png');*/
     border-bottom: 1px solid #DDDDDD;
 }
 
@@ -90,7 +90,11 @@ body {
 }
 
 .content .span12 p {
-    font-size: 16px;
+    font-size: 15px;
+}
+
+.content {
+    ĥeight: 100%;
 }
 
 .row{

@@ -35,7 +35,7 @@
 .page-header-post {
     height: 220px;
     position: relative;
-    background-image: url('img/pattern.png');
+    /*background-image: url('img/pattern.png');*/
     border-bottom: 1px solid #DDDDDD;
 }
 
@@ -92,6 +92,7 @@ body {
 .content .span12 p {
     font-size: 15px;
 }
+
 
 .row{
     padding-bottom: 50px;
