@@ -1,5 +1,0 @@
----
-layout: chau
----
-{% include JB/setup %}
-{% include themes/chau/page.html %}

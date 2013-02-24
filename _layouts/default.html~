@@ -1,6 +1,0 @@
----
-theme :
-  name : twitter
----
-{% include JB/setup %}
-{% include themes/chau/default.html %}
