@@ -9,3 +9,5 @@ group: navigation
 * living in Karlsruhe, Germany
 * origin in Vietnam
 * likes to sing (and dance)
+
+If you want to contact me, feel free to write hello@chau-nguyen.de

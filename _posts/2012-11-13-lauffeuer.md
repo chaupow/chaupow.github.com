@@ -31,7 +31,7 @@ Except your Recipient, no other person on the way can read your message as it is
 As Lauffeuer is mainly an idea it is put on hold at the moment. It would be great if Lauffeuer is implemented for all kind of operating systems such as Android, iOS, etc and is on everyone's mobile device. That would be quite cool.
 
 ### And what was your role in this project?
-As a team we developed the idea, the concept, the design and architecture together. When coming to the implementation we splited the tasks. I was mainly responsible for the GUI and the controller that uses all the other modules and controls the workflow of the application.
+As a team we developed the idea, the concept, the design and architecture together. When coming to the implementation we split the tasks. I was mainly responsible for the GUI and the controller that uses all the other modules and controls the workflow of the application.
 
 ### Anthing else to brag about?
 I can proudly tell you that we were awarded the 2nd place of the national [Microsoft Imagine Cup](http://www.microsoft.com/germany/msdn/academic/imagine-cup/gewinner2012.aspx) in the category _Windows Phone_ in 2012. Furthermore we got 2nd place at [Zukunftspreis Kommunikation 2012](http://www.zukunftspreis-kommunikation.de/) (translated it means something like _future award for communication_)
@@ -49,5 +49,5 @@ Here are some articles, presentations and documents about Lauffeuer that might i
 * Read our [functional specs](/assets/docs/lauffeuer-pflichtenheft.pdf) (de)
 * Read our [design specs](/assets/docs/lauffeuer-entwurfsdokument.pdf) (de)
 
-If there's anything else you're interested in write us an email! We still have lots of presentation slide, documents, etc.
+If there's anything else you're interested in write us an email! We still have lots of presentation slides, documents, etc.
 
