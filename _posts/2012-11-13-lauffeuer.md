@@ -33,7 +33,7 @@ As Lauffeuer is mainly an idea it is put on hold at the moment. It would be grea
 ### And what was your role in this project?
 As a team we developed the idea, the concept, the design and architecture together. When coming to the implementation we split the tasks. I was mainly responsible for the GUI and the controller that uses all the other modules and controls the workflow of the application.
 
-### Anthing else to brag about?
+### Anthing else?
 I can proudly tell you that we were awarded the 2nd place of the national [Microsoft Imagine Cup](http://www.microsoft.com/germany/msdn/academic/imagine-cup/gewinner2012.aspx) in the category _Windows Phone_ in 2012. Furthermore we got 2nd place at [Zukunftspreis Kommunikation 2012](http://www.zukunftspreis-kommunikation.de/) (translated it means something like _future award for communication_)
 
 ![Imagine Cup](/assets/img/lauffeuer2.jpg "Team at Imagine Cup") ![Zukunftspreis Kommunikation](/assets/img/lauffeuer1.jpg "Team at Zukunftspreis Kommunikation")
