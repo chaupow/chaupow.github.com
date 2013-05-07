@@ -10,4 +10,4 @@ group: navigation
 * origin in Vietnam
 * likes to sing (and dance)
 
-If you want to contact me, feel free to write chaaau.n@gmail.com
+If you want to contact me, feel free to write <a href="mailto:hello@chau-nguyen.de">hello@chau-nguyen.de</a>
