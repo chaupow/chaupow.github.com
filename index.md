@@ -7,4 +7,3 @@ tagline:
 
 [Enter Website](welcome.html)
 [Forschungspreisende](http://www.forschungspreisen.de)
-[Twitter](http://www.twitter.com/c64au)
