@@ -11,3 +11,5 @@ tags : [bachelor thesis, graph augmentation, regular graphs, planar graphs]
 It is done! I have finished my bachelor thesis successfully and the four months working on it were some of the coolest months in my life.
 
 For the interested folks out there, you can find my bachelor thesis hosted by the institute [here] (http://i11www.iti.uni-karlsruhe.de/_media/teaching/theses/ba_chaunguyen.pdf). 
+
+Here are my [presentation slides](/assets/docs/BachelorThesis_Pres.pdf) (DE).
