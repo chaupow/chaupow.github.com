@@ -12,7 +12,7 @@ It is done! I have finished my bachelor thesis successfully and the four months 
 
 ![Bachelor Thesis](/assets/img/bachelor1.jpg "Regular Augmentations of Planar Graphs with Low Degree")
 
-For the interested folks out there, you can find my bachelor thesis hosted by the institute [here] (http://i11www.iti.uni-karlsruhe.de/_media/teaching/theses/ba_chaunguyen.pdf). 
+For the interested folks out there, you can find [my bachelor thesis hosted by the institute here] (http://i11www.iti.uni-karlsruhe.de/_media/teaching/theses/ba_chaunguyen.pdf). 
 
 ![Bachelor Thesis Slides](/assets/img/bachelor2.jpg "Regular Augmentations of Planar Graphs with Low Degree Presentation Slides")
 
