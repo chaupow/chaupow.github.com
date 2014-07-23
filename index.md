@@ -8,3 +8,4 @@ tagline:
 [Enter Website](welcome.html)
 [Forschungspreisende](http://www.forschungspreisen.de)
 [Chau's China](http://chauschina.tumblr.com)
+[Chau's Blog](http://chaupow.tumblr.com/)
