@@ -11,7 +11,7 @@ Im Sommer wollen wir am Karlsruher Institut für Technologie einen Programmierku
 ## Unterstützung für Schulen
 
 ### App Camps
-App Camps aus Hamburg setzen sich dafür ein, dass Schüler die Möglichkeit erhalten, Programmieren zu lernen. Dafür bietet App Camps sowohl eigene Workshops an, als auch Unterstützung von Schulen, Institutionen oder Firmen um App Workshops zu veranstalten. Das Fokus liegt auf der mobilen App Programmierung. Ich war kurz in Kontakt mit App Camps um einige Tipps zu erhalten. Es sind auf jeden Fall ziemlich coole Leute dort, die coole Sachen machen:
+App Camps aus Hamburg setzen sich dafür ein, dass Schüler die Möglichkeit erhalten, Programmieren zu lernen. Dafür bietet App Camps sowohl eigene Workshops an, als auch Unterstützung für Schulen, Institutionen oder Firmen um App Workshops zu veranstalten. Das Fokus liegt auf der mobilen App Programmierung. Ich war kurz in Kontakt mit App Camps um einige Tipps für unseren Programmierkurz zu erhalten. Es sind auf jeden Fall ziemlich coole Leute dort, die coole Sachen machen:
 
 [App Camps](http://www.appcamps.de/)
 
@@ -31,7 +31,7 @@ Die Universität Passau bietet jedes Jahr ein Informatik-Sommercamp für Schüle
 ## Informatikangebote für Schülerinnen
 
 ### Schnupperstudium für Schülerinnen an der TU Dortmund
-In den Herbstferien bietet die TU Dortmund einen Wochenkurs Informatik für Schülerinnen an. Dort kann man in viele verschiedene Disziplinen der Informatik reinschnuppern, Vorlesungen hören und praktische Erfahrungen im Programmieren sammeln. Zielgruppe sind Schüler der Klassen 9-13Mehr Infos gibts hier:
+In den Herbstferien bietet die TU Dortmund einen Wochenkurs Informatik für Schülerinnen an. Dort kann man in viele verschiedene Disziplinen der Informatik reinschnuppern, Vorlesungen hören und praktische Erfahrungen im Programmieren sammeln. Zielgruppe sind Schüler der Klassen 9-13. Mehr Infos gibts hier:
 
 [Schnupperstudium für Schülerinnen](http://www.cs.tu-dortmund.de/nps/de/Studieninteressierte/Schnupperuni_Informatik/index.html)
 
@@ -51,7 +51,7 @@ Das Karlsruher Institut für Technologie bietet seit einigen Jahren Science Camp
 ## Angebote für Frauen
 
 ### Rails Girls Berlin
-Die Rails Girls Berlin bieten viele Workshops an, um Frauen das Framework Ruby on Rails vorzustellen. Ich selbst irgendwann (2013?) bei einem Kurs teilgenommen und es hat viel Spaß gemacht. Diese Kurse finden nicht speziell für Jugendliche statt, es gibt aber kein Mindestalter und die Leute sind wirklich sehr nett! Mehr Infos:
+Die Rails Girls Berlin bieten viele Workshops an, um Frauen das Framework Ruby on Rails vorzustellen. Ich selbst habe irgendwann (2013?) bei einem Kurs teilgenommen und es hat viel Spaß gemacht. Diese Kurse finden nicht speziell für Jugendliche statt, es gibt aber kein Mindestalter und die Leute sind wirklich sehr nett, sodass Jüngere mit Interesse an Rails auf jeden Fall auch an der richtigen Stelle sind! Mehr Infos:
 
 [Rails Girls Berlin](http://railsgirlsberlin.de/)
 
@@ -63,9 +63,9 @@ Die Rails Girls Berlin bieten viele Workshops an, um Frauen das Framework Ruby o
 ## Online Initiativen
 
 ### Code.org
-Code.org sammelt Materialien um Lehrern und Schülern das Lernen von Programmieren zu erleichtern. Die Initiaitve "Hour of Code" soll alle motivieren eine Stunde Zeit in das Erlernen von Programmieren zu investieren. Um diese "Hour of Code" werden verschiedene Materialien angeboten: Vom spielerischen Lernen für Grundschulkinder, bei dem kein Code geschrieben, aber das Grundkonzept des Programmierens beigebracht wird, bis hin zum Erlernen von Java, Python oder JavaScript. 
+Code.org sammelt Materialien um Lehrern und Schülern das Lernen von Programmieren zu erleichtern. Die Initiaitve "Hour of Code" soll alle motivieren, eine Stunde Zeit in das Erlernen von Programmieren zu investieren. Um diese "Hour of Code" zu absolvieren, werden verschiedene Materialien angeboten: Vom spielerischen Lernen für Grundschulkinder, bei dem kein Code geschrieben, aber das Grundkonzept des Programmierens beigebracht wird, bis hin zum Erlernen von Java, Python oder JavaScript. 
 
-_Anm.: Bevor ich diesen Post verfasst habe, kann ich allerdings nur die englischsprachige Version der Webseite und war enttäuscht, als ich mir die deutsche Seite anschaute, da das Angebot auf deutsch doch sehr gering ist. Wer der englischen Sprache mächtig ist, dem empfehle ich dringendst die englische Seite._
+_Anm.: Bevor ich diesen Post verfasst habe, kannte ich allerdings nur die englischsprachige Version der Webseite und war enttäuscht, als ich mir die deutsche Seite anschaute, da das Angebot auf deutsch doch sehr gering ist. Wer der englischen Sprache mächtig ist, dem empfehle ich dringendst die englische Seite._
 
 [code.org](http://code.org/)
 
