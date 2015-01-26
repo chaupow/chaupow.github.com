@@ -48,6 +48,18 @@ Das Karlsruher Institut für Technologie bietet seit einigen Jahren Science Camp
 [Science Camp Energie](http://www.fsz.kit.edu/science-camp-energie.php)
 [Science Camp Geothermie](http://www.fsz.kit.edu/science-camp-geothermie.php)
 
+## Angebote für Frauen
+
+### Rails Girls Berlin
+Die Rails Girls Berlin bieten viele Workshops an, um Frauen das Framework Ruby on Rails vorzustellen. Ich selbst irgendwann (2013?) bei einem Kurs teilgenommen und es hat viel Spaß gemacht. Diese Kurse finden nicht speziell für Jugendliche statt, es gibt aber kein Mindestalter und die Leute sind wirklich sehr nett! Mehr Infos:
+
+[Rails Girls Berlin](http://railsgirlsberlin.de/)
+
+### Django Girls
+Ähnlich wie die Rails Girls haben sich auch die Django Girls gesammelt und veranstalten Kurse zum erlernen von Django. Hin und wieder finden diese auch in Deutschland statt.
+
+[Django Girls](http://djangogirls.org/)
+
 ## Online Initiativen
 
 ### Code.org
