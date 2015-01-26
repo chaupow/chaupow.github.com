@@ -10,6 +10,7 @@ tags : [lego mindstorm, robot, lejos, sir daniel]
 <div class="imageright">
     <img src="/assets/img/sirdaniel.jpg">
 </div>
+
 ### "I, Robot" at university
 This year I attended the practical course Lego Mindstorm Robot at my university. Together with 3 friends we constructed our robot Sir Daniel and participated the big challenge.
 

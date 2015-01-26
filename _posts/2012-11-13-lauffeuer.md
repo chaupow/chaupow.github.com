@@ -10,6 +10,7 @@ tags : [zukunftspreis kommunikation, microsoft imagine cup]
 <div class="imageright">
     <img src="/assets/img/lauffeuer-screen.png">
 </div>
+
 ### What is Lauffeuer?
 Lauffeuer is a project I developed with my friends [Tobias Sturm](http://tobiassturm.de), Vitali Kaiser and Philipp Serrer at university.
 It is mainly about an idea, a concept we thought of but we also made a prototype for Windows Phone.
