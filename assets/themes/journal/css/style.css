@@ -1,7 +1,10 @@
+.container {
+  width: 800px;
+}
 
 
 .span12 {
-  width: 900px;
+  width: 760px;
 }
 
 .imageright img,
