@@ -6,7 +6,7 @@ tags : [bachelor thesis, graph augmentation, regular graphs, planar graphs]
 {% include JB/setup %}
 
 
-Im Sommer plane ich am Karlsruher Institut für Technologie einen Programmierkurs für Schülerinnen anzubieten. Wir sind noch am Anfang unserer Planungs-, Organisations- und Konzerptionsphase, haben aber gerade am Anfang auch recherchiert, welche Angebote es denn bisher für Schüler bereits gibt. Hier ist eine kleine Auflistung der Angebote, die wir gefunden haben:
+Im Sommer wollen wir am Karlsruher Institut für Technologie einen Programmierkurs für Schülerinnen anbieten. Zur Zeit sind wir noch am Anfang unserer Planungs-, Organisations- und Konzeptionsphase, haben aber bereits viel recherchiert, welche Angebote es denn für Schüler bereits gibt. Hier ist eine kleine Auflistung der Angebote, die wir gefunden haben:
 
 ## Unterstützung für Schulen
 
@@ -82,4 +82,10 @@ Interaktiv Rails lernen.
 _Anm.: Diese Seite ist nicht speziell für Schüler konzipiert._
 
 [Rails for Zombies](http://railsforzombies.org/)
+
+## Persönliche Inspiration
+
+Meine persönliche Inspiration für das ganze Vorhaben ist die Initiative "Girls who Code" in USA:
+
+[Girls who code](http://girlswhocode.com/)
 
