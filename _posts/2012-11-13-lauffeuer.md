@@ -41,6 +41,7 @@ I can proudly tell you that we were awarded the 2nd place of the national [Micro
 
 ### Tell me more!
 Here are some articles, presentations and documents about Lauffeuer that might interest you.
+
 * **Watch our [presentation](http://www.youtube.com/watch?v=u6wSHh9P3-s&feature=plcp) at university (de)**
 * **Learn more from [Tobias Sturm](http://www.tobiassturm.de/projects/Lauffeuer.html) (en)**
 * See our [demonstration video](http://www.youtube.com/watch?v=e8CByZDHHGg) (en)
@@ -48,6 +49,8 @@ Here are some articles, presentations and documents about Lauffeuer that might i
 * Read our [exposé](/assets/docs/lauffeuer-expose.pdf) for Zukunftspreis Kommunikation (de)
 * Read our [functional specs](/assets/docs/lauffeuer-pflichtenheft.pdf) (de)
 * Read our [design specs](/assets/docs/lauffeuer-entwurfsdokument.pdf) (de)
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/u6wSHh9P3-s" frameborder="0" allowfullscreen></iframe>
 
 If there's anything else you're interested in write us an email! We still have lots of presentation slides, documents, etc.
 
