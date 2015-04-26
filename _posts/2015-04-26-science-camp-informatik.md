@@ -109,4 +109,4 @@ ______
 
 ### Work in process
 
-[here](sciencecamp_test/01_BasicHTML.html)
+[here](/assets/sciencecamp_test/01_BasicHTML.html)
