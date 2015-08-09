@@ -1,0 +1,169 @@
+<!Doctype html>
+<html>
+<head>
+    <title>
+    HTML & CSS
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style_template.css"/>
+    <link rel="stylesheet" href="js/highlight/styles/tomorrow.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+    <div class="menu">
+    <ul>
+        <li class="tag current"><a>Tag 1</a></li>
+        <li class="parts"><a href="tag1-0html.html">Part 1: HTML</a></li>
+        <li class="parts current"><a>Part 2: CSS</a></li>
+        <li class="parts"><a href="tag1-2sonstiges.html">Part 3: Abschluss</a></li>
+        <li class="tag"><a href="../intern_ressources/sciencecamp_test/Tag2.html">Tag 2</a></li>
+    </ul>
+    </div>
+
+    <div class="container">
+        <h1>CSS</h1>
+
+        <p>Wir haben ein Webseite und sie sieht schonmal recht gut aus! Das Design lässt allerdings noch ein bisschen zu wünschen übrig. Um Webseiten zu designen kann man CSS benutzen. Eine CSS-Datei ist eine Datei, in der man Anweisen zum Design geben kann. Zum Beispiel kannst du dort angeben, welche Hintergrundfarbe oder Textfarbe die Webseite haben soll.</p>
+
+        <h2>Einfügen der CSS Datei</h2>
+
+        <p>Erstelle zuerste einen neuen Ordner namens <code class="inline_code">style</code>. In diesem Ordner erstellst du eine leere Datei mit dem Namen <code class="inline_code">style.css</code>.</p>
+
+        <p>Dann fügst du im <code class="inline_code">head</code>-Bereich deiner Webseite die Information ein, dass wir in <code class="inline_code">style.css</code> den Style der Webseite festlegen werden:</p>
+
+        <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style_template.css&quot;/&gt;</code></pre>
+
+        <h2>Aufbau von CSS</h2>
+
+        <p>Der Aufbau eines CSS sieht so aus:</p>
+
+        <pre><code class="css">Element_das_ein_Styling_kriegt {
+    Attribut_1: Wert_für_Attribut_1;
+    Attribut_2: Wert_für_Attribut_2;
+}</code></pre>
+
+        <p>Eine Übersicht über alle möglichen Attribute gibt es <a href="https://developer.mozilla.org/de/docs/Web/CSS/CSS_Referenz">hier</a>.</p>
+
+        <h2>Hintergrund</h2>
+
+        <p>Wenn wir also zum Beispiel die Hintergrundfarbe der gesamten Webseite ändern wollen, schreiben wir folgendes in die CSS Datei:</p>
+
+        <pre><code class="css">body {
+    background: red;
+}</code></pre>
+
+        <p>Wenn du die Farbe genauer spezifizieren möchtest, brauchst du einen bestimmten Code für die Farben. Auf <a href="http://www.flatuicolorpicker.com/">http://www.flatuicolorpicker.com/</a> findest du eine Menge Farben und deren Codes. Die Codes bestehen immer aus sechs Zeichen und müssen mit einem <code class="inline_code">#</code> anfangen. Zum Beispiel:</p>
+
+        <pre><code class="css">body {
+    background: #FDE3A7;
+}</code></pre>
+
+        <p>Statt einer Farbe kannst du auch Bilder benutzen:</p>
+
+        <pre><code class="css">body {
+    background-image: url(../bilder/subtlepatterns/pink_rice.png);
+}</code></pre>
+
+        <p><em><code class="inline_code">..</code> heißt übrigens, dass man in der Ordnerstruktur einen Ordner hoch gehen muss und dann in den Ordner <code class="inline_code">bilder</code> etc.</em></p>
+
+        <p>Eine tolle Seite zum Suchen nach Hintergrundbildern ist <a href="http://subtlepatterns.com/">http://subtlepatterns.com/</a>.</p>
+
+        <p><strong class="aufgabe">Such dir einen Hintergrund für deine Webseite aus.</strong></p>
+
+        <h2>Schrift</h2>
+
+        <p>Schriftart, -farbe, -größe und -ausrichtung bestimmt man mit </p>
+
+        <pre><code class="css">color: #111111;
+font-family: Helvetica;
+font-size: 14px;
+text-align: left;</code></pre>
+
+        <p>Die Schriftgröße kannst du mit einer festen Anzahl an pixeln setzen. Du kannst sie aber auch relativ zu der Standardgröße (die Größe, die im Body genutzt wird) setzen. Wenn du zum Beispiel die Größe im <code class="inline_code">body</code> auf <code class="inline_code">14px</code> setzt und in der Überschrift eine Schrift haben willst, die vier mal so groß ist, schreib:</p>
+
+        <pre><code class="css">font-size: 4em;</code></pre>
+
+        <p><strong class="aufgabe">Style die Schrift im Body und für die h1 Überschrift</strong></p>
+
+        <h2>Design des Inhalts</h2>
+
+        <p>Vergleicht man unsere aktuelle Webseite mit unserem Ziel, dann wollen wir den Inhalt unserer Webseite zentrieren und einen anderen Hintergrund haben. Jetzt kommt unser DIV ins Spiel! </p>
+
+        <p>Wir wollen nämlich allem, was im Div ist </p>
+
+        <ul>
+        <li>einen anderen Hintergrund geben</li>
+        <li>die Breite ein wenig kleiner machen </li>
+        <li>zentrieren</li>
+        </ul>
+
+        <p>Dazu geben wir dem Div erstmal einen Namen. Dafür gehen wir zurück in die HTML-Datei und ändern </p>
+
+        <pre><code class="html">&lt;div&gt;
+    ...
+&lt;/div&gt;</code></pre>
+
+        <p>um in</p>
+
+        <pre><code class="html">&lt;div class=&quot;inhalt&quot;&gt;
+    ...
+&lt;/div&gt;</code></pre>
+
+        <p>Jetzt ist unser DIV ein DIV der Klasse &ldquo;inhalt&rdquo; und wir können die Breite und den Hintergrund wie folgt festlegen:</p>
+
+        <pre><code class="css">.inhalt {
+    background: white;
+    width: 800px;
+}</code></pre>
+
+        <p>Zentrieren geht mit</p>
+
+        <pre><code class="css">margin: 0 auto;</code></pre>
+
+        <p>Leider ist es etwas unschön, dass es keinen Rand zwischen dem DIV und dem Text gibt. Das kann man mit einem sogenannten <code class="inline_code">padding</code> ändern. Ein Padding wird mit 4 Werten angegeben: Der Abstand nach oben, nach rechts, nach unten und nach links (also im Uhrzeigersinn).
+        Dein Padding kann z.B. so aussehen:</p>
+
+        <pre><code class="css">padding: 40px 30px 60px 30px;</code></pre>
+
+        <p><strong class="aufgabe">Style deinen Inhalt, sodass er dir gefällt.</strong></p>
+
+        <h2>Menüleiste</h2>
+
+        <p>Was jetzt noch fehlt, ist eine schöne Menüleiste, wie in unserer Demo:</p>
+
+        <p><img src="bilder/menu.png" alt="" class="img"></p>
+
+        <p>Die Menüleiste sieht sehr verdächtig nach einem neuen DIV aus!</p>
+
+        <p><strong class="aufgabe">Füge ein neues DIV mit einer Liste vor dem restlichen Inhalt in die HTML-Seite ein. Gib dem DIV die Klasse <code class="inline_code">menu</code> und setze ein padding.</strong></p>
+
+        <p>Jetzt wollen wir das DIV stylen.</p>
+
+        <p><strong class="aufgabe">Gib dem Menu eine dunkle Hintergrundfarbe und setze die Schrift auf eine helle Farbe.</strong></p>
+
+        <p>Nun wollen wir die Listenpunkte verschwinden lassen. Außerdem möchten wir den Text nicht untereinander, sondern nebeneinander. Dafür kannst du folgende Attribute setzen:</p>
+
+        <pre><code class="css">.menu ul {
+    display: inline-block;
+    list-style: none;
+}</code></pre>
+
+        <p>und</p>
+
+        <pre><code class="css">.menu ul li {
+    float: left;
+}</code></pre>
+
+        <p>Jetzt ist der Text zwar nebeneinander, aber es ist viel zu nah und klebt sofort am vorherigen Text. Dafür benutzen wie wieder ein padding!</p>
+
+        <pre><code class="css">.menu ul li {
+    padding: 8px 25px;
+}</code></pre>
+
+        <p><strong class="weiter"><a href="tag1-2sonstiges.html">Zum Abschluss noch einige sonstigen Anmerkungen</a></strong></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    /* Background pattern from subtlepatterns.com */
+    background-image: url(../hintergruende/swirl_pattern.png);
+    font-family: Helvetica;
+    font-size: 15px;
+    margin: 0;
+}
+
+html,body {
+    height:100%;
+}
+
+a {
+    color: #111111;
+}
+
+/************************* MENÜLEISTE **************************/
+.menu {
+    /* Klebe das Menu oben fest */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    /* design */
+    background: #111111;
+    opacity: 0.9;
+    z-index: 1;
+
+    text-align: center;
+}
+.menu ul {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    list-style:none;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul a {
+    display: block;
+    text-decoration:none;
+    color: #DDDDDD;
+    text-align:center;
+    padding: 8px 10px;
+}
+
+.menu ul .tag a {
+    margin-left: 30px;
+}
+
+.menu ul a:hover {
+    /* Verändere den Hintergrund, wenn man mit der Maus über dem Link ist*/
+    background: #333333;
+}
+
+.menu .parts a {
+    color: #ffffff;
+}
+
+.menu ul .current a:hover {
+    background: #111111;
+}
+
+.menu .tag a {
+    color: #F9690E;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px 30px 50px 30px;
+    color: #000000;
+    background: #ffffff;
+    min-height: 100%;
+}
+
+pre {
+    border: 1px solid #555555;
+}
+
+code {
+    font-size: 1.1em;
+}
+
+.inline_code {
+    color: #3A539B;
+    font-weight: bold;
+}
+
+.aufgabe {
+    color: #03A678;
+}
+
+.weiter a {
+    font-size: 1.1em;
+    color: #F9690E;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 5em;
+    font-weight: normal;
+    border-bottom: 1px solid #999999;
+    margin: 40px 0 30px 0;
+}
+
+h2 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 3em;
+    font-weight: normal;
+    padding: 0 0 3px 0;
+    border-bottom: 1px solid #bbbbbb;
+    margin: 100px 0 0 0;
+}
+
+.img {
+    max-width: 100%;
+}

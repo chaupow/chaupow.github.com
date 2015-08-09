@@ -1,0 +1,289 @@
+<!Doctype html>
+<html>
+<head>
+    <title>
+    HTML & CSS
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style/style_template.css"/>
+    <link rel="stylesheet" href="http://chau-nguyen.de/assets/js/highlight/styles/tomorrow.css">
+    <script src="http://chau-nguyen.de/assets/js/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+    <div class="menu">
+    <ul>
+        <li class="tag current"><a>Tag 1</a></li>
+        <li class="parts current"><a>Part 1: HTML</a></li>
+        <li class="parts"><a href="tag1-1css.html">Part 2: CSS</a></li>
+        <li class="parts"><a href="tag1-2sonstiges.html">Part 3: Abschluss</a></li>
+        <li class="tag"><a href="../intern_ressources/sciencecamp_test/Tag2.html">Tag 2</a></li>
+    </ul>
+    </div>
+
+    <div class="container">
+        <h1>HTML</h1>
+
+        <h2>Was ist HTML?</h2>
+
+        <p>HTML ist Sprache um Webseiten zu bauen. Mit HTML kann man <em>beschreiben</em>, wie eine Webseite aussehen soll. Im engeren Sinne ist es deswegen eigentlich keine Programmiersprache, sondern lediglich eine beschreibene Sprache.</p>
+
+        <p>HTML Dateien enden mit dem Dateiformat <code class="inline_code">.html</code> und können ganz einfach vom Browser geöffnet werden.</p>
+
+        <p><strong class="aufgabe">Erstelle eine leere Textdatei namens <code class="inline_code">index.html</code> und öffne sie im Browser.</strong></p>
+
+        <h2>Grundgerüst HTML</h2>
+
+        <p>Das Grundgerüst von HTML sieht immer so aus:</p>
+
+        <pre><code class="html" class="html">&lt;html&gt;
+
+    &lt;head&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        <p>Die spitzen Klammern beschreiben immer einen Bereich. <code class="inline_code">&lt;html&gt;</code> beginnt einen html Bereich oder Abschnitt. <code class="inline_code">&lt;/html&gt;</code> beendet ihn.</p>
+
+        <p>Die Einrückungen sind eigentlich unwichtig.</p>
+
+        <p>Diese Schreibweise ist genauso korrekt:</p>
+
+        <pre><code class="html">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+
+        <p>Diese sagt auch das gleiche:</p>
+
+        <pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <p>Allerdings ist es ein guter Stil, den Code richtig einzurücken. Also gewöhnt es euch am besten sofort an :) Außerdem ist es besser lesbar.</p>
+
+        <h2>Der Head-Bereich</h2>
+
+        <p>Im Head - also dem Kopfteil - sind Informationen, die nicht auf der Webseite selbst dargestellt werden. Stattdessen sind hier andere Informationen drin, die nur indirekt mit der eigentlichen Webseite zu tun haben. Man nennt solche Informationen auch Meta-Informationen.</p>
+
+        <p>Ein Beispiel wäre zum Beispiel der Titel einer Webseite.</p>
+
+        <pre><code class="html">&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;title&gt;Meine Webseite&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        <p>Eine andere Information, die wir unserer Webseite noch mitgeben ist, dass wir Texte schreiben, in denen zum Beispiel Umlaute wie ü oder ß vorkommen. Diese Symbole sind im sogenannten UTF-8 enthalten.</p>
+
+        <p>Wir fügen also folgende Information in den Head Bereich ein, um Umlaute schreiben zu können:</p>
+
+        <pre><code class="html">&lt;meta charset=&quot;utf-8&quot;&gt;</code></pre>
+
+        <p><strong class="aufgabe">Probier es aus und finde raus, wo der Titel auftaucht.</strong></p>
+
+        <h2>Der Body-Bereich</h2>
+
+        <p>Im Body ist der eigentliche Inhalt der Webseite. Wenn ich zum Beispiel einen Text auf meiner Webseite haben möchte, Schreibe ich ganz einfach den Text in den Body.</p>
+
+        <pre><code class="html">&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;title&gt;Meine Webseite&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        Willkommen auf meiner Webseite!
+
+        Hier werde ich alles ausprobieren,
+        was ich auf dem ScienceCamp Informatik
+        gelernt habe und eine coole Webseite bauen.
+
+        Diese Seite wird in einer Woche
+        wirklich toll aussehen!
+    &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        <p><strong class="aufgabe">Schreibe deine erste HTML-Seite mit Inhalt.</strong></p>
+
+        <p>Wie du siehst, ist die Formatierung des Textes auf der Webseite leider nicht so, wie wir es uns wünschen. Dafür müssen wir noch einige Textformatierungen lernen:</p>
+
+        <ul>
+        <li><code class="inline_code">&lt;br/&gt;</code> ist eine Abkürzung für break, also ein Zeilenumbruch</li>
+        <li><code class="inline_code">&lt;h1&gt;Überschriften&lt;/h1&gt;</code> kann man mit h1-Tags schreiben. <code class="inline_code">h</code> ist die Abkürzung für Headline, also einer Überschrift. statt <code class="inline_code">h1</code> kann man auch <code class="inline_code">h2</code> oder <code class="inline_code">h3</code> usw. benutzen. Die Überschriften werden mit steigender Zahl kleiner.</li>
+        <li><code class="inline_code">&lt;p&gt;Paragraphen&lt;/p&gt;</code> kann man mit p-Tags beschreiben. Die sind nicht unbedingt nötig, sind aber zu empfehlen.</li>
+        </ul>
+
+        <p><strong class="aufgabe">Versuche nochmal deine erste Seite zu schreiben indem du die neu gelernten Tags anwendest.</strong></p>
+
+        <pre><code class="html">&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;title&gt;Meine Webseite&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;
+            Willkommen auf meiner Webseite!
+        &lt;/h1&gt;
+        &lt;p&gt;
+            Hier werde ich alles ausprobieren,
+            was ich auf dem ScienceCamp Informatik
+            gelernt habe und eine coole Webseite bauen.
+        &lt;/p&gt;
+        &lt;p&gt;
+            Diese Seite wird in einer Woche
+            wirklich toll aussehen!
+        &lt;/p&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+        <p>Es gibt auch weitere Tags für Text wie zum Beispiel <code class="inline_code">&lt;strong&gt; text &lt;/strong&gt;</code> oder <code class="inline_code">&lt;em&gt; text &lt;/em&gt;</code>.</p>
+
+        <p><strong class="aufgabe">Probier strong und em aus.</strong></p>
+
+        <h2>Mehr als nur Text</h2>
+
+        <p>Webseiten bestehen üblicherweise aus mehr als nur Text. Moderne Webseiten haben Bilder, Links oder Listen.</p>
+
+        <h3>Bilder</h3>
+
+        <p>Bilder kann man wie folgt einfügen:</p>
+
+        <pre><code class="html">&lt;img src=&quot;PFAD_ZUM_BILD&quot;/&gt;</code></pre>
+
+        <p>Der Pfad zum Link ist eine Angabe, wo sich das Bild befindet.</p>
+
+        <p>Beispiel:
+        Wenn diese HTML Datei und das Bild im gleichen Ordner sind, also so:</p>
+
+        <pre><code class="html">irgendein Ordner
+        ├── index.html
+        └── bild.jpg</code></pre>
+
+        <p>dann wäre das Bild so aufzurufen: <code class="inline_code">&lt;img src=&quot;bild.jpg&quot;/&gt;</code></p>
+
+        <p>Wenn diese HTML Datei in einem Ordner ist, in dem sich ein weiterer Ordner <code class="inline_code">bilder</code> befindet, in dem bilder drin sind, also so:</p>
+
+        <pre><code class="html">irgendein Ordner
+        ├── index.html
+        └── Ordner
+            └── bild.jpg</code></pre>
+
+        <p>dann wäre das Bild so aufzurufen: <code class="inline_code">&lt;img src=&quot;bilder/bild.jpg&quot;/&gt;</code></p>
+
+        <p>Du kannst alle möglichen Bildformate benutzen. Es funktioniert zum Beispiel auch mit <code class="inline_code">.gif</code> oder <code class="inline_code">.png</code>-Dateien.</p>
+
+        <p><img src="bilder/bild.gif" alt="" class="img"></p>
+
+        <p>Du kannst auch auf Bilder von anderen Webseiten zugreifen.</p>
+
+        <p>Auf <code class="inline_code">http://i.giphy.com/achoDiZFxZvdm.gif</code> ist zum Beispiel ein Bild. Um dieses anzuzeigen, kannst du den Link einfügen, also:</p>
+
+        <p><code class="inline_code">&lt;img src=&quot;http://i.giphy.com/achoDiZFxZvdm.gif&quot;/&gt;</code></p>
+
+        <p><img src="http://i.giphy.com/achoDiZFxZvdm.gif"/></p>
+
+        <p>Falls du deine Webseite mal online stellst, solltest du das allesdings aus verschiedenen Gründen (z.B. Copyright) vermeiden. Für den kleinen persönlichen Gebrauch ist es aber erstmal ok.</p>
+
+        <p><strong class="aufgabe">Füge ein Foto von dir und Bilder in deine Webseite ein.</strong></p>
+
+        <h3>Links</h3>
+
+        <p>Webseiten brauchen natürlich auch Links zu anderen Webseiten:</p>
+
+        <pre><code class="html">&lt;a href=&quot;PFAD_ZUM_LINK&quot;&gt; Text &lt;/a&gt;</code></pre>
+
+        <p>Auch hier gilt wie bei Bildern: Du kannst du externen Links verlinken oder auch eine eigene HTML-Seite mit dem Pfad angeben:</p>
+
+        <p><code class="inline_code">&lt;a href=&quot;https://de.wikipedia.org/wiki/Hyperlink&quot;&gt; Wikieintrag zu Hyperlinks &lt;/a&gt;</code></p>
+
+        <p><a href="https://de.wikipedia.org/wiki/Hyperlink"> Wikieintrag zu Hyperlinks </a></p>
+
+        <p>Der Inhalt innerhalb des a-Tags ist der Teil, der dann anklickbar ist und zum Link führt.
+        Du kannst auch Bilder als Link benutzen:</p>
+
+        <pre><code class="html">&lt;a href=&quot;https://de.wikipedia.org/wiki/Haushund&quot;&gt;
+    &lt;img src=&quot;bilder/link.gif&quot;/&gt;
+&lt;/a&gt;</code></pre>
+
+        <p><a href="https://de.wikipedia.org/wiki/Haushund">
+            <img src="bilder/link.gif"/>
+        </a></p>
+
+        <p>Wie du merkst, öffnet sich der Link direkt im aktuellen Tab oder Fenster. Manchmal (vor allem bei Links zu externen Seiten), möchte man den Link lieber in einem neuen Tag öffnen.
+        Setze dafür ein <code class="inline_code">target</code>, also ein Ziel:</p>
+
+        <pre><code class="html">&lt;a href=&quot;https://de.wikipedia.org/wiki/Hyperlink&quot; target=&quot;_blank&quot;&gt;
+    Wikieintrag zu Hyperlinks
+&lt;/a&gt;</code></pre>
+
+        <p><a href="https://de.wikipedia.org/wiki/Hyperlink" target="_blank">
+            Wikieintrag zu Hyperlinks
+        </a></p>
+
+        <p><strong class="aufgabe">Erstelle drei Links zu deinen Lieblingsseiten ein.</strong></p>
+
+        <h3>Listen</h3>
+
+        <p>Listen macht man mit einem ul-Tag und jeder einzelne Bulletpoint wird mit einem li-Tag beschrieben. So sieht das dann aus:</p>
+
+        <pre><code class="html">Einkaufsliste
+&lt;ul&gt;
+    &lt;li&gt; Eiscreme &lt;/li&gt;
+    &lt;li&gt; Smoothie &lt;/li&gt;
+    &lt;li&gt; Kekse &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <p>Einkaufsliste
+        <ul>
+            <li> Eiscreme </li>
+            <li> Smoothie </li>
+            <li> Kekse </li><br>
+        </ul></p>
+
+        <p><strong class="aufgabe">Erstelle eine Liste mit deinen Hobbys</strong></p>
+
+        <h3>DIVs</h3>
+
+        <p>Kommen wir nun zum wichtigsten Konstrukt von Webseiten: Divs. Ein Div-Tag ist schwer zu erklären. Man kann mit einem Div, gewisse Inhalte gruppieren und strukturieren.
+        Nehmen wir als Beispiel Facebook.</p>
+
+        <p><img src="bilder/facebook.png" alt="" class="img"></p>
+
+        <p>Die Seite hat verschiedene Inhalte. Um dies zu strukturieren, werden verschiedene Divs benutzt. Facebook könnte zum Beispiel so aussehen:</p>
+
+        <p><img src="bilder/facebook_div.png" alt="" class="img"></p>
+
+        <p>Warum genau DIVs nützlich sind und gebraucht werden, wird später nochmal klarer. Inhalte in DIVs zu unterteilen ist recht einfach:</p>
+
+        <pre><code class="html">&lt;div&gt;
+    &lt;!-- Inhalte vom Div --&gt;
+&lt;/div&gt;</code></pre>
+
+        <p><strong class="aufgabe">Schreibe deinen aktuellen Webseiten Inhalt in ein DIV.</strong></p>
+
+        <h2>Glückwunsch!</h2>
+
+        <p><strong class="aufgabe">Du kannst nun alle Basics für HTML &lt;3</strong></p>
+
+        <p>Aber ehrlich gesagt sieht unsere Webseite noch nicht wirklich schön aus. Wir könnten zwar auch mit HTML unser Design machen, aber es gibt einen viel besseren Ansatz, um das zu bewerkstelligen. Es nennt sich <strong>CSS</strong>.</p>
+
+        <p><strong class="weiter"><a href="tag1-1css.html">Erfahre mehr über CSS</a></strong></p>
+    </div>
+
+</body>
+</html>
