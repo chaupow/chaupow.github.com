@@ -1,0 +1,122 @@
+body {
+    /* Background pattern from subtlepatterns.com */
+    background-image: url(../hintergruende/swirl_pattern.png);
+    font-family: Helvetica;
+    font-size: 14px;
+    margin: 0;
+}
+
+html,body {
+    height:100%;
+}
+
+#map {
+    height: 100%;
+    margin: 35px 0 0 0;
+}
+
+.leaflet-control-attribution {
+    bottom: 35px;
+}
+
+/************************* MENÜLEISTE **************************/
+.menu {
+    /* Klebe das Menu oben fest */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    /* design */
+    background: #111111;
+    opacity: 0.9;
+    z-index: 1;
+
+    font-size: 1.3em;
+    text-align: center;
+}
+.menu ul {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    list-style:none;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul a {
+    display: block;
+    text-decoration:none;
+    color: #DDDDDD;
+    text-align:center;
+    padding: 8px 30px;
+}
+
+.menu ul a:hover {
+    /* Verändere den Hintergrund, wenn man mit der Maus über dem Link ist*/
+    background: #333333;
+}
+
+.menu span {
+    display: block;
+    text-align:center;
+    color: #DDDDDD;
+    padding: 8px 10px;
+    font-weight: bold;
+}
+
+#routing {
+    color: #F89406;
+}
+
+.menu button {
+    display: block;
+    color: #111111;
+    text-align:center;
+    padding: 8px 30px;
+    margin: 0 30px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px 30px 50px 30px;
+    color: #000000;
+    background: #ffffff;
+    min-height: 100%;
+}
+
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 6em;
+    font-weight: normal;
+    border-bottom: 1px solid #999999;
+    margin: 40px 0 30px 0;
+}
+
+h2 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 4em;
+    font-weight: normal;
+    padding: 0 0 3px 0;
+    border-bottom: 1px solid #bbbbbb;
+    margin: 100px 0 0 0;
+}
+
