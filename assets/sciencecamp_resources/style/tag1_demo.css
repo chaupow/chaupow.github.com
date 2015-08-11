@@ -1,0 +1,88 @@
+body {
+    background-image: url(../bilder/subtlepatterns/sativa.png);
+
+    color: #111111;
+    font-family: Helvetica;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 6em;
+    font-weight: normal;
+    border-bottom: 1px solid #999999;
+    margin: 40px 0 30px 0;
+}
+
+h2 {
+    font-family: Arial;
+    text-align: center;
+    font-size: 4em;
+    font-weight: normal;
+    padding: 0 0 3px 0;
+    border-bottom: 1px solid #bbbbbb;
+    margin: 100px 0 0 0;
+}
+
+a {
+    color: #111111;
+}
+
+
+
+.inhalt {
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px 30px 60px 30px;
+    color: #000000;
+    background: #ffffff;
+    height: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/************************* MENÜLEISTE **************************/
+.menu {
+    /* Klebe das Menu oben fest */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    /* design */
+    background: #111111;
+    opacity: 0.9;
+    z-index: 1;
+
+    text-align: center;
+}
+.menu ul {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    list-style:none;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul a {
+    display: block;
+    text-decoration:none;
+    color: #DDDDDD;
+    text-align:center;
+    padding: 8px 30px;
+}
+
+.menu ul a:hover {
+    /* Verändere den Hintergrund, wenn man mit der Maus über dem Link ist*/
+    background: #333333;
+}
