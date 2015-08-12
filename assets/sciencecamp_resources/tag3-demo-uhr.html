@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meine Webseite</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style/tag3-demo-uhr.css"/>
+        <link rel="stylesheet" type="text/css" href="style/tag3-demo-uhr2.css"/>
+        <script src="js/name.js"></script>
+        <script src="js/uhr.js"></script>
+    </head>
+
+    <body>
+        <!-- Menüleiste -->
+        <div class="menu">
+            <ul>
+                <li><a href="http://giphy.com/">Giphy</a></li>
+                <li><a href="http://www.flatuicolorpicker.com/">Flat UI Color Picker</a></li>
+                <li><a href="http://subtlepatterns.com/">Subtlepatterns</a></li>
+            </ul>
+        </div>
+
+        <div class="inhalt">
+        	<div id="uhr"></div>
+            <!-- Überschrift -->
+
+            <h1>
+                Willkommen!
+            </h1>
+
+            <p>
+                Hier werde ich alles ausprobieren,
+                was ich auf dem ScienceCamp Informatik
+                gelernt habe und eine coole Webseite bauen.
+            </p>
+            <p>
+                Diese Seite wird in einer Woche
+                wirklich toll aussehen!
+            </p>
+
+            <!-- Katzenbild -->
+            <img src="bilder/giphy/katze.gif" class="center"/>
+
+            <!-- Links -->
+            <p>
+                Hier geht es <a href="https://www.facebook.com/" target="_blank">zu meiner Facebookseite</a>.<br/>
+                Hier zu <a href="https://www.youtube.com/" target="_blank">YouTube.</a><br/>
+                Hier zu <a href="http://www.zeit.de/index" target="_blank">Zeit Online.</a><br/>
+            </p>
+
+            <!-- Hobbys -->
+            <p>
+                Meine Hobbys sind
+                <ul>
+                    <li>Tanzen</li>
+                    <li>Reisen</li>
+                    <li>Singen</li>
+                </ul>
+            </p>
+
+            <!-- YouTube Video -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CTvCDuumWrg" frameborder="0" allowfullscreen class="center"></iframe>
+
+            <p id="name"> </p>
+            <p>
+            <button onclick="show()">Drücke mich! </button>
+            <button onclick="change()">Ändere die Variable name</button>
+            </p>
+            <p> Jetzt kommt If und Else:</p>
+            <button onclick="hund()">Magst du Hunde?</button>
+            <img id ="bild" src="http://www.kika.de/die-beste-klasse-deutschlands/hintergrund/fragezeichen100_v-tlarge169_w-600_zc-be147c57.jpg%3Fversion%3D39405"/>
+
+
+            <p id="Summe"> </p>
+            <button onclick="summe()"> Summe </button>
+
+             <p id="array"> </p>
+            <button onclick="arrayelem()"> Arrays </button>
+
+        </div>
+    </body>
+
+</html>
