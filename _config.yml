@@ -1,12 +1,132 @@
-# Site settings
-title: Chau's Website
-email: hello@chau-nguyen.de
-description: > # this means to ignore newlines until "baseurl:"
-  Huyen Chau Nguyen is a computer science student at Kalsruher Institute of Technology. On this website you can find out more about her.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://chau-nguyen.de" # the base hostname & protocol for your site
-twitter_username: c64au
-github_username:  chaupow
+name: Chau Nguyen
+description: Chau Nguyen
+url: chaupow.github.io
+baseurl:
+permalink: /:title/
+paginate: 20
+paginate_path: /page/:num/
+tag_dir: /tag
+category_dir: /blog
+category_title_prefix: ''
+author_dir: /author
+author_title_prefix: 'Posted by '
+media_folder: /img
+author_default_avatar: /profile-pic.jpg
+# tumblr: "#"
+# pinterest: "#"
+instagram: "instagram.com/pikachau91"
+twitter: "https://twitter.com/ChauPow"
+facebook: "https://www.facebook.com/chau.nguyen.91"
+# youtube: "#"
+# vimeo: "#"
+linkedin: "https://www.linkedin.com/in/huyen-chau-nguyen-a3740b5b"
+github: "https://github.com/chaupow"
 
-# Build settings
+encoding: utf-8
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      type: "standard"
+      homedisplay: "featimg"
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+relative_permalinks: false
+exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_modules, README.md, documentation]
+
+gems: [jekyll-paginate]
+
+# prose.io configurations
+prose:
+  media: "img"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "layout"
+        field:
+          element: "select"
+          label: "Layout"
+          help: "display post at full width or with sidebar"
+          options:
+            - name: "with sidebar"
+              value: "post"
+            - name: "full width"
+              value: "post_full"
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          help: "author id as defined within _data/authors.yml"
+          type: "text"
+      - name: "featimg"
+        field:
+          element: "text"
+          label: "Featured Image"
+          help: "featured image within the img-folder"
+          type: "text"
+      - name: "type"
+        field:
+          element: "select"
+          label: "Post Type"
+          help: "each type has some special feature"
+          options:
+            - name: "Standard"
+              value: "standard"
+            - name: "Image"
+              value: "image"
+            - name: "Gallery"
+              value: "gallery"
+            - name: "Audio"
+              value: "audio"
+            - name: "YouTube"
+              value: "youtube"
+            - name: "Vimeo"
+              value: "vimeo"
+            - name: "Instagram"
+              value: "instagram"
+      - name: "homedisplay"
+        field:
+          element: "select"
+          label: "Home Display"
+          help: "decide whether to display embedded element (for post types: audio, youtube, vimeo) or Featured Image on home page"
+          options:
+            - name: "Featured Image"
+              value: "featimg"
+            - name: "Embedded Element"
+              value: "iframe"
+      - name: "vimeo-embed"
+        field:
+          element: "text"
+          label: "Vimeo Embedding Code"
+          help: "Set post type to vimeo in order for this to work"
+      - name: "gallery-id"
+        field:
+          element: "text"
+          label: "Gallery ID"
+          help: "ID of the gallery defined within _data/galleries.yml - use include in content to use"
+      - name: "audio-embed"
+        field:
+          element: "text"
+          label: "Audio Embedding Code"
+          help: "Set post type to audio in order for this to work"
+      - name: "yt-video-id"
+        field:
+          element: "text"
+          label: "YouTube Video ID"
+          help: "Set post type to youtube in order for this to work. Do not set featured image, as the youtube video thumbnail will be used"
+          type: "text"
+      # - name: "instagram-url"
+      #   field:
+      #     element: "text"
+      #     label: "Instagram URL"
+      #     help: "Set post type to instagram in order for this to work. Do not set featured image, as the instagram image"
+      #     type: "text"
+

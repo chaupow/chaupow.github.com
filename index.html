@@ -1,23 +1,55 @@
 ---
-layout: default
+layout: index
+description: Chau Nguyen
 ---
+{% for post in site.posts %}
+    {% include article_index.html %}
+{% endfor %}
+{% if paginator.total_pages > 1 %}
+    <div class="pagination">
+        <!-- link to first page -->
+        {% if paginator.total_pages > 3 %}
+            {% if paginator.page == 1 %}
+                <span class="disabled"><i class="fa fa-angle-double-left"></i></span>
+            {% else %}
+                <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-double-left"></i></a>
+            {% endif %}
+        {% endif %}
 
-<div class="home">
+        <!-- previous link -->
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
+        {% else %}
+            <span class="disabled"><i class="fa fa-angle-left"></i></span>
+        {% endif %}
 
-  <h1 class="page-heading">Posts</h1>
+        <!-- number links -->
+        {% capture start %}
+            {{ paginator.page | minus: 3 }}
+        {% endcapture %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% for i in (1..paginator.total_pages) limit: 5 offset: start %}
+            {% if i == paginator.page %}
+                <span class="disabled">{{ i }}</span>
+            {% else %}
+                <a href="/page/{{ i }}">{{ i }}</a>
+            {% endif %}
+        {% endfor %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <!-- next link -->
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-right"></i></a>
+        {% else %}
+            <span class="disabled"><i class="fa fa-angle-right"></i></span>
+        {% endif %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+        <!-- last page link -->
+        {% if paginator.total_pages > 3 %}
+            {% if paginator.page == paginator.total_pages %}
+                <span class="disabled"><i class="fa fa-angle-double-right"></i></span>
+            {% else %}
+                <a href="{{ site.baseurl | replace: '//', '/' }}/page/{{paginator.total_pages}}"><i class="fa fa-angle-double-right"></i></a>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endif %}
