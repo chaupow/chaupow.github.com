@@ -9,7 +9,7 @@ title: About Chau Nguyen
 
 🏡 from Darmstadt
 
-❤️ in love with Karlsruhe, Kyoto and Copenhagen
+🌍️ in love with Karlsruhe, Kyoto and Copenhagen
 
 🇻🇳 Vietnamese
 
@@ -22,6 +22,14 @@ title: About Chau Nguyen
 🗺 [mapboxer](mapbox.com)
 
 🙈 emoticon lover
+
+### Ultra-short CV
+- 2010-2013: Computer Science Bachelor at KIT
+- 2013-2014: 6 months IT internship in China
+- 2014:      6 month research internship at Philips
+- 2014-2017: Computer Science Master at KIT
+- 2015-2016: Exchange year at Kyoto University
+
 
 ### More
 - [Science Camp Informatik](science-camp-informatik)
