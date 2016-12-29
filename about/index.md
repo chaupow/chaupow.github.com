@@ -32,6 +32,7 @@ title: About Chau Nguyen
 
 
 ### More
+- [Kyoto Recommendations](kyoto)
 - [Science Camp Informatik](science-camp-informatik)
 - [Bachelor Thesis](bachelor-thesis)
 - [Lauffeuer](lauffeuer)
