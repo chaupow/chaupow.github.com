@@ -1,3 +1,5 @@
+*.todo
 _site
 .sass-cache
 assets/sciencecamp_test/icons
+
