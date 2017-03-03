@@ -3,39 +3,52 @@
 
 <head>
     <title>Differences of Minimum and Maximum Travel Times</title>
-    <script src="node_modules/chart.js/dist/Chart.bundle.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.js"></script>
-    <script src="node_modules/chart.js/samples/utils.js"></script>
     <link rel="stylesheet" href="base.css">
 
 </head>
 
 <body>
-<article class="typesettings">
-    <h1>Charts!</h1>
-    <p>Lektion von heute: Daten sinnvoll anzeigen ist schwer. Dies ist ein guter Anfang, aber es geht sicher noch besser.</p>
-    <h2>Was sieht man hier?</h2>
-    <p>
-    Aufgezeichnet ist <code>MinMaxDiff = longest_travel_time(e) - shortest_travel_time(e)</code> jeder Kante in der Schweiz und Deutschland und die Anzahl der Kanten, die, diese <code>MinMaxDiff</code> haben. Diese <code>MinMaxDiff</code> sind bucketed in 120s buckets. (<code>MinMaxDiff == 0</code> gibt es natürlich nicht. Dies sind die Anzahl der Kanten, bei denen <code>0s < MinMaxDiff < 120s</code> gilt).
-    </p>
-    <h2>Daten</h2>
-    <p>Betrachtet wurden alle Kanten mit Connections in der Schweiz und Deutschland, mit Abfahrtszeiten zwischen 8:00 und 18:00 Uhr.</p>
-    <p>Der letzte Datenpunkt (mit der absurden travel time) sind die Anzahl der Kanten, zwischen denen man <strong>nicht</strong> laufen kann. Dementsprechend ist das loslaufen nach der letzten Connection unmöglich und die travel time zu hoch.</p>
-    <h2>Chaus ToDos</h2>
-    <p>Wenn ich irgendwann zu viel Zeit haben sollte:</p>
-    <ul>
-        <li> Schweiz und Deutschland in den gleichen Plot packen
-        <li> Sinnvolles Histogramm Tool finden
-        <li> Percentile und so Zeug ausrechnen
-    </ul>
-</article>
-    <div style="width:90%; padding: 50px;">
+<article class="typesettings" style="width:80%;">
+    <div style="width:100%;">
+        <h1>Charts!</h1>
+        <p>Lektion von heute: Daten sinnvoll anzeigen ist schwer. Dies ist ein guter Anfang, aber es geht sicher noch besser.</p>
+        <h2>Was sieht man hier?</h2>
+        <p>
+        Aufgezeichnet ist <code>MinMaxDiff = longest_travel_time(e) - shortest_travel_time(e)</code> jeder Kante in der Schweiz und Deutschland und die Anzahl der Kanten, die, diese <code>MinMaxDiff</code> haben. Diese <code>MinMaxDiff</code> sind bucketed in 120s buckets. (<code>MinMaxDiff == 120</code>  sind die Anzahl der Kanten, bei denen <code>0s < MinMaxDiff < 120s</code> gilt).
+        </p>
+        <p>
+        Außerdem gibt es <code>MinMaxRelDiff = longest_travel_time(e) / shortest_travel_time(e)</code> in Prozentangaben.
+        </p>
+        <h2>Daten</h2>
+        <p>Betrachtet wurden alle Kanten mit Connections in der Schweiz und Deutschland, mit Abfahrtszeiten zwischen 8:00 und 18:00 Uhr.</p>
+        <p>Der letzte Datenpunkt (mit der absurden travel time) sind die Anzahl der Kanten, zwischen denen man <strong>nicht</strong> laufen kann. Dementsprechend ist das loslaufen nach der letzten Connection unmöglich und die travel time zu hoch.</p>
+    </div>
+    <div style="width:100%">
+        <br/>
+        <h3><code>MinMaxDiff</code> in der Schweiz</h3>
+        <br/>
         <canvas id="canvas_ch"></canvas>
     </div>
-    <div style="width:90%; padding: 50px;">
+        <br/>
+    <div style="width:100%">
+        <h3><code>MinMaxRelDiff</code> in der Schweiz</h3>
+        <br/>
+        <canvas id="canvas_rel_ch"></canvas>
+    </div>
+    <div style="width:100%">
+        <br/>
+        <h3><code>MinMaxDiff</code> in Deutschland</h3>
+        <br/>
         <canvas id="canvas_ger"></canvas>
     </div>
+    <div style="width:100%">
+        <br/>
+        <h3><code>MinMaxRelDiff</code> in Deutschland</h3>
+        <br/>
+        <canvas id="canvas_rel_ger"></canvas>
+    </div>
     <script src='bundle.js'></script>
+</article>
 </body>
 
 </html>
