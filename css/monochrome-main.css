@@ -104,7 +104,7 @@ p, ul, ol {
   /* 24px/16px */ }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2em;
   /* 36px/16px */
   line-height: 1.3333em;
   /* 48px/36px */
@@ -119,8 +119,16 @@ h2 {
   padding: 0.5em 0 0 0;
   /* 12px/24px * 2, only top (Use padding instead of margin to maintain proximity with paragwithph) */ }
 
-h3, h4, h5, h6 {
+h3 {
   font-size: 1.125em;
+  /* 18px/16px */
+  line-height: 1.3334em;
+  /* 24px/18px */
+  padding: 0.66667em 0;
+  /* 12px/18px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
+
+h4, h5, h6 {
+  font-size: 1.05em;
   /* 18px/16px */
   line-height: 1.3334em;
   /* 24px/18px */
@@ -153,7 +161,7 @@ blockquote {
     /* 24px/18px */ }
 
   h1 {
-    font-size: 2.6667em;
+    font-size: 2em;
     /* 48px/18px */
     line-height: 1em;
     /* 48px/48px */
@@ -168,8 +176,16 @@ blockquote {
     padding: 0.33334em 0 0 0;
     /* 12px/36px * 2, pnly top (Use padding instead of margin to maintain proximity with paragraph) */ }
 
-  h3, h4, h5, h6 {
+  h3 {
     font-size: 1.3334em;
+    /* 24px/18px */
+    line-height: 1em;
+    /* 24px/24px */
+    padding: 0.5em 0;
+    /* 12px/24px * 2 (Use padding instead of margin to maintain proximity with paragraph) */ }
+
+h4, h5, h6 {
+    font-size: 1.05em;
     /* 24px/18px */
     line-height: 1em;
     /* 24px/24px */
@@ -346,10 +362,10 @@ blockquote {
 #container {
   margin: 0 auto;
 }
-#container span .mtext   {
+/*#container span .mtext   {
   font-family: 'Lato', 'Alegreya Sans', 'Source Sans Pro', sans-serif !important;
 }
-
+*/
 #container p, ul {
   font-family: 'Lato', 'Alegreya Sans', 'Source Sans Pro', sans-serif;
   font-size: 1.2em;
@@ -361,33 +377,39 @@ blockquote {
   list-style-type: disc;
   margin-left: 1.2em;
   padding-left: -1.4em;
+  font-style: normal;
 }
 
 #container #posts li.post {
   list-style-type: none;
 }
 
+/*#container #posts h1 {
+  font-size: 1.5em;
+}
+*/
 #container h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
 }
 
 #container h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
+  /*font-size: 1.2em;*/
 }
 #container h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  /*font-size: 1em;*/
 }
 #container blockquote {
   padding: 1em;
+  font-family: 'Lato', 'Alegreya Sans', 'Source Sans Pro', sans-serif;
 }
 /*#container blockquote li{
   margin: 0.2em;
 }*/
 #container blockquote li .MathJax_Display {
-  margin: 0;
+  margin: 3px 0;
   padding: 0;
   text-align: left !important;
 }
