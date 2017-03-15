@@ -22,7 +22,7 @@ The main idea of this approach is to identify a set of edges $$L_1 \subset E$$ w
 ### Levels of Layers and Edges
 We also call the subsets $$L_i$$ **layers with level $$i$$**.
 
-We define **levels of edges $$e_i$$ in a path** as follows:
+We define **levels of edges $$e_i$$ in a path $$P=(e_0, \dots, e_k)$$** as follows:
 > $$
 > level(e_i) =
 > \begin{cases}
@@ -32,7 +32,9 @@ We define **levels of edges $$e_i$$ in a path** as follows:
 > \end{cases}
 > $$
 
-For $$L_0$$ and $$L_1$$ the **layer condition** holds:
+We denote the level of a path $$level(P)=k$$ if $$\forall e \in P : level(e) =k$$.
+
+For $$L_0$$ and $$L_1$$ the **layer condition** is true:
 > $$\forall \text{ shortest paths } P=(e_0, e_1, \dots , e_k) \text{ }\exists l,k: l \leq k \text{ with} \\
 > \\
 > level(e_i) =
@@ -50,9 +52,9 @@ alternatively:
 > P & = \underline{P_s} + \overline{P} + \underline{P_t} \\
 > & = (e_{0} \,, \dots \,, e_{h})+(E_0, \dots \,, E_k)+(\tilde{e_{0}}\,, \dots \,, \tilde{e_{l}}) \text{ with} \end{align}$$
 > * $$level(e_i) = 0$$ 
-> * $$level(\tilde{e_i}) = 1$$
-> * $$level(E_i) = 0$$
-> * $$len(\underline{P_s}, \overline{P}, \underline{P_t} \geq 0)$$
+> * $$level(E_i) = 1$$
+> * $$level(\tilde{e_i}) = 0$$
+> * $$len(\underline{P_s}), len(\overline{P}), len(\underline{P_t}) \geq 0)$$
 
 ### Heuristics
 
@@ -104,20 +106,6 @@ A*, then correct Dijsktra.
 
 A*, then Dijkstra, then A*.
 
-### Corollar Shortest-Path-Order
-
-> Let $$P=(e_0 = (s, v_0), \dots, e_k = (v_{k-1}, t))$$ be a shortest path from $$s$$ to $$t$$. For every vertex $$v_i$$ it is $$key(v_i)\leq key(v_{i+1})$$.
-
-Proof: 
-> $$\begin{align}
-> key(v_i) & \leq key(v_{i+1})\\
-> \Leftrightarrow len(e_0, ..., e_{i}) + \pi_t(v_i) & \leq len(e_0, ..., e_{i}, e_{i+1}) + \pi_t(v_{i+1})\\
-> \Leftrightarrow \pi_t(v_i) & \leq len(e_{i+1}) + \pi_t(v_{i+1})\\
-> \Leftrightarrow 0 & \leq len(e_{i+1}) - \pi_t(v_i) + \pi_t(v_{i+1})
-> \end{align}$$
- 
-Which is exactly the definition of feasibility of heuristics!
-
 # Second Take: Stopping _PTG-A*_
 _Simple PTG-A*_ is basically a mix of a Dijsktra and A* that traverses the whole graph and all its edges. Can we stop the search after relaxing our target $$t$$? Namely, can we add line `5` as follows?
 
@@ -146,10 +134,26 @@ while(!Q.empty())
 
 ## Correctness
 
-We will find a proof by contradiction:
+We will find a proof by contradiction - but first a neat corollar!
+
+### Corollar Shortest-Path-Order
+
+> Let $$P=(e_0, \dots, e_k)\equiv (v_0, \dots, v_{k+1})$$ be a shortest path from $$v_0$$ to $$v_{k+1}$$ and $$level(P)=0$$. For every vertex $$v_i$$ it is $$key(v_i)\leq key(v_{i+1})$$.
+
+Proof: 
+> $$\begin{align}
+> key(v_i) & \leq key(v_{i+1})\\
+> \Leftrightarrow len(e_0, ..., e_{i}) + \pi_t(v_i, 0) & \leq len(e_0, ..., e_{i}, e_{i+1}) + \pi_t(v_{i+1}, 0)\\
+> \Leftrightarrow \pi_t(v_i, 0) & \leq len(e_{i+1}) + \pi_t(v_{i+1}, 0)\\
+> \Leftrightarrow 0 & \leq len(e_{i+1}) - \pi_t(v_i, 0) + \pi_t(v_{i+1}, 0)
+> \end{align}$$
+ 
+Which is exactly the definition of feasibility of heuristics!
+
+Back to trying to prove correctness of PTG-A*
 
 ### Case 1: Shortest path $$P$$ with $$level(P) = 0$$
-Let $$\hat{P} \neq P$$ be the shortest path found by _PTA-A*_ and $$len(\hat{P})\gt len(P)$$. 
+Let $$\hat{P} \neq P$$ be the shortest path found by _PTG-A*_ and $$len(\hat{P})\gt len(P)$$. 
 
 If $$\forall e \in \hat{P}: e \in L_0 \cup L^*$$ it is a contradiction to the correctness of A\*. Therefore, $$\exists \hat{e}=(u,v)\in \hat{P} : \hat{e} \in L_1$$. With no loss of generality we assume 
 
@@ -184,7 +188,7 @@ The proof in Case 1 makes use of the fact that key values in a shortest path are
 > 3. `1`+`2` $$\Rightarrow \overline{P} + \underline{P_t}$$ is monotonically increasing
 > 4. But we know the key values when visiting $$\underline{P_s}$$ and $$\underline{P_t}$$ are also increasing. This means that as soon we relax an edge $$e$$ from $$\overline{P}$$, we will find the path $$P(s, e)$$
 
-Let $$\hat{P} \neq P$$ be the shortest path found by _PTA-A*_ and $$len(\hat{P})\gt len(P)$$. Let edge $$e=(u,v)$$ be the last edge of $$\underline{P_s}$$.
+Let $$\hat{P} \neq P$$ be the shortest path found by _PTG-A*_ and $$len(\hat{P})\gt len(P)$$. Let edge $$e=(u,v)$$ be the last edge of $$\underline{P_s}$$.
 
 ![bla](/master_thesis/img/ptg-a-correctness3.png)
 
