@@ -368,8 +368,8 @@ h4, h5, h6 {
 */
 #container p, ul, ol {
   font-family: 'Lato', 'Alegreya Sans', 'Source Sans Pro', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.3em;
+  font-size: 1em;
+  line-height: 1.5em;
   margin-bottom: 0.6666em;
 }
 
@@ -402,9 +402,26 @@ h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   /*font-size: 1em;*/
 }
+/*#container h4 {
+  border-bottom: 1px solid #dddddd;
+}*/
 #container blockquote {
   padding: 1em;
   font-family: 'Lato', 'Alegreya Sans', 'Source Sans Pro', sans-serif;
+}
+#container table {
+    border-collapse: collapse;
+}
+
+#container table,
+#container th,
+#container td {
+    border: 1px solid #dddddd;
+}
+#container th,
+#container td {
+ padding-right: 2em;
+ padding-left: 1em;
 }
 /*#container blockquote li{
   margin: 0.2em;
@@ -415,13 +432,13 @@ h4, h5, h6 {
   text-align: left !important;
 }
 #container blockquote .MathJax_Display {
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 #container blockquote .MathJax {
   margin: 3px 0;
 }
 #container .MathJax {
-  font-size: 1em;
+  font-size: 0.85em;
 }
 #container blockquote p,
 #container blockquote ul {
