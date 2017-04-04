@@ -198,11 +198,11 @@ But when relaxing edge $$e$$ we update vertex $$v$$ with $$key(v) = len(P(s,v)) 
 
 ## <a name="dominating-labels"></a>Adding Labels to the Queue
 
-The algorithm PTG-A* updates labels of vertices (as in line `12`, `16`, `20`). The algorithm works correctly if you update a label $$label(v) = (v, l_{max}, l_{curr}, key(v))$$ with $$label'(v) = (v, l'_{max}, l'_{curr}, key'(v))$$ if $$l_{max} = l'_{max} \wedge l_{curr} = l'_{curr} \wedge key'(v) \lt key(v)$$ and add a new label to the queue additionally otherwise. But there should be some cases in which we can also update a label even though $$l_{max} \neq l'_{max} \wedge l_{curr} \neq l'_{curr}$$.
+The algorithm PTG-A* updates labels of vertices (as in line `12`, `16`, `20`). The algorithm works correctly if you update a label $$label(v) = (v, l_{max}, l_{curr}, key(v))$$ with $$label'(v) = (v, l'_{max}, l'_{curr}, key'(v))$$ if $$l_{max} = l'_{max} \wedge l_{curr} = l'_{curr} \wedge key'(v) \lt key(v)$$. Otherwise, we will add the new label additionally to the old one to the queue. But there should be some cases in which we can also update a label even though $$l_{max} \neq l'_{max} \wedge l_{curr} \neq l'_{curr}$$.
 
 Therefore, we analyze all cases where
-* $$label_{old}(v) = (v, x, y, key_{xy}(v))$$ is already in the queue
-* and we want to update/insert $$label_{new}(v) = (v, w, z, key_{wz}(v))$$ to the queue.
+* $$label_{old}(v) = (v, x, y, key_{xy}(v))$$ is already in the queue and
+* $$label_{new}(v) = (v, w, z, key_{wz}(v))$$ is the new label we want to update/add to the queue.
 
 In every case we have to check whether we need to
 * keep $$label_{old}(v)$$ or
@@ -210,7 +210,7 @@ In every case we have to check whether we need to
 * add $$label_{new}(v)$$ or
 * ignore $$label_{new}(v)$$
 
-Let $$P_{old}$$ and $$P_{new}$$ be the paths from $$s$$ to $$t$$ found that create $$label_{old}(v)$$ and $$label_{new}(v)$$
+Let $$P$$ be the shortest path from $$s$$ to $$t$$. Let $$P_{old}$$ and $$P_{new}$$ be the paths from $$s$$ to vertex $$v$$ that create $$label_{old}(v)$$ and $$label_{new}(v)$$. 
 
 ### $$key_{00}$$
 
@@ -218,7 +218,7 @@ Let $$P_{old}$$ and $$P_{new}$$ be the paths from $$s$$ to $$t$$ found that crea
 * remove $$label_{old}(v)$$
 * add $$label_{new}(v)$$ 
  
-Proof: The shortest path $$P$$ does not use the subpath $$P_{old}(s, v)$$:
+Proof: 
 
 > $$\begin{align}
 > key_{00} & \gt key_{xz} \implies \\
@@ -226,14 +226,15 @@ Proof: The shortest path $$P$$ does not use the subpath $$P_{old}(s, v)$$:
 > len(P_{new}) & \lt len(P_{old})
 > \end{align}$$
 
-Therefore, $$P_{old}$$ cannot be a subpath of $$P$$ and we can remove $$label_{old}(v)$$.
+Therefore, the shortest path $$P$$ does not use the subpath $$P_{old}$$.
+Thus, $$P_{old}$$ cannot be a subpath of $$P$$ and we can remove $$label_{old}(v)$$.
 
 
 #### if $$key_{00} \gt key_{10}$$
 * keep $$label_{old}(v)$$
 * ignore $$label_{new}(v)$$ 
 
-Proof: The shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actually, the algorithm will not even attempt to ever add $$label_{new}(v))$$ because of line `7`:
+Proof: 
 
 > $$\begin{align}
 > key_{00} & \gt key_{xz} \implies \\
@@ -241,7 +242,9 @@ Proof: The shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actu
 > len(P_{new}) & \gt len(P_{old})
 > \end{align}$$
 
-Therefore, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{new}(v)$$.
+Therefore, the shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actually, the algorithm will not even attempt to ever add $$label_{new}(v)$$ because of line `7` in the code).
+
+Thus, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{new}(v)$$.
 
 #### if $$key_{00} \gt key_{11}$$
 
@@ -249,7 +252,7 @@ Therefore, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{n
     * keep $$label_{old}(v)$$
     * ignore $$label_{new}(v)$$ 
 
-Proof: The shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actually, the algorithm will not even attempt to ever add $$label_{new}(v))$$ because of line `7`:
+Proof: 
 
 > $$\begin{align}
 > key_{00} - \pi_t(v, 0) &\gt key_{11} \implies \\
@@ -257,13 +260,14 @@ Proof: The shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actu
 > len(P_{new}) & \gt len(P_{old})
 > \end{align}$$
 
-Therefore, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{new}(v)$$.
+Therefore, the shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$.
+Thus, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{new}(v)$$.
 
 * If $$key_{00} - \pi_t(v, 0) \lt key_{11}$$
     * remove $$label_{old}(v)$$
     * add $$label_{new}(v)$$ 
 
-Proof: The shortest path $$P$$ does not use the subpath $$P_{old}(s, v)$$:
+Proof: 
 
 > $$\begin{align}
 > key_{00} - \pi_t(v, 0) & \lt key_{11} \implies \\
@@ -271,7 +275,8 @@ Proof: The shortest path $$P$$ does not use the subpath $$P_{old}(s, v)$$:
 > len(P_{new}) & \lt len(P_{old})
 > \end{align}$$
 
-Therefore, $$P_{old}$$ cannot be a subpath of $$P$$ and we can remove $$label_{old}(v)$$.
+Therefore, the shortest path $$P$$ does not use the subpath $$P_{old}(s, v)$$.
+Thus, $$P_{old}$$ cannot be a subpath of $$P$$ and we can remove $$label_{old}(v)$$.
 
 ### $$key_{11}$$
 
@@ -279,7 +284,7 @@ Therefore, $$P_{old}$$ cannot be a subpath of $$P$$ and we can remove $$label_{o
 * keep $$label_{old}(v)$$
 * ignore $$label_{new}(v)$$ 
 
-Proof: The shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actually, the algorithm will not even attempt to ever add $$label_{new}(v))$$ because of line `7`:
+Proof: 
 
 > $$\begin{align}
 > key_{11} & \gt key_{xz} \implies \\
@@ -287,7 +292,8 @@ Proof: The shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$. (Actu
 > len(P_{new}) & \gt len(P_{old})
 > \end{align}$$
 
-Therefore, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{new}(v)$$.
+Therefore, the shortest path $$P$$ does not use the subpath $$P_{new}(s, v)$$.
+Thus, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{new}(v)$$.
 
 #### if $$key_{11} \lt key_{x0}$$
 
@@ -371,17 +377,18 @@ Therefore, $$P_{new}$$ cannot be a subpath of $$P$$ and we can ignore $$label_{n
 Looking at the results above we either remove $$label_{old}$$ and add $$label_{new}$$ or we keep $$label_{old}$$ and ignore $$label_{new}$$.
 Therefore, we either update (remove and add) or keep (keep and ignore) the label.
 
-| $$key_{00}$$ | $$\lt key_{xy}$$  | update |
-|  | $$\gt key_{10}$$ | keep |
-|  | $$\gt key_{11} + \pi$$ | keep |
-|  | $$\lt key_{11} + \pi$$ | update |
-| $$key_{11}$$ | $$\gt key_{xy}$$  | keep |
-|  | $$\lt key_{x0} - \pi $$ | update |
-|  | $$\gt key_{11} - \pi$$ | keep |
-| $$key_{10}$$ | $$\lt key_{xy}$$  | update |
-|  | $$\gt key_{00}$$ | keep |
-|  | $$\lt key_{11} + \pi$$ | update |
-|  | $$\gt key_{11} + \pi$$ | keep |
+{:.text-table}
+| $$key_{00}$$ | $$\lt key_{xy}$$  | **update**{:.update} |
+|  | $$\gt key_{10}$$ | **keep**{:.keep} |
+|  | $$\gt key_{11} + \pi$$ | **keep**{:.keep} |
+|  | $$\lt key_{11} + \pi$$ | **update**{:.update} |
+| $$key_{11}$$ | $$\gt key_{xy}$$  | **keep**{:.keep} |
+|  | $$\lt key_{x0} - \pi $$ | **update**{:.update} |
+|  | $$\gt key_{11} - \pi$$ | **keep**{:.keep} |
+| $$key_{10}$$ | $$\lt key_{xy}$$  | **update**{:.update} |
+|  | $$\gt key_{00}$$ | **keep**{:.keep} |
+|  | $$\lt key_{11} + \pi$$ | **update**{:.update} |
+|  | $$\gt key_{11} + \pi$$ | **keep**{:.keep} |
 
 Due to line `7` in the code, many cases do not even need to be checked because the algorithm would never try to add those labels anyways.
 

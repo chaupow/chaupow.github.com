@@ -409,19 +409,22 @@ h4, h5, h6 {
   padding: 1em;
   font-family: 'Lato', 'Alegreya Sans', 'Source Sans Pro', sans-serif;
 }
-#container table {
-    border-collapse: collapse;
+#container .text-table table {
+  border-collapse: collapse;
+  border-spacing: 0 !important;
 }
 
-#container table,
-#container th,
-#container td {
-    border: 1px solid #dddddd;
+#container .text-table table,
+#container .text-table th,
+#container .text-table td {
+  border-collapse: collapse;
+  border-spacing: 0 !important;
 }
-#container th,
-#container td {
- padding-right: 2em;
- padding-left: 1em;
+#container .text-table th,
+#container .text-table td {
+  border: 1px solid #dddddd;
+  padding-right: 2em;
+  padding-left: 1em;
 }
 /*#container blockquote li{
   margin: 0.2em;
