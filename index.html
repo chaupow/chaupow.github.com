@@ -1,55 +1,51 @@
----
-layout: index
-description: Chau Nguyen
----
-{% for post in site.posts %}
-    {% include article_index.html %}
-{% endfor %}
-{% if paginator.total_pages > 1 %}
-    <div class="pagination">
-        <!-- link to first page -->
-        {% if paginator.total_pages > 3 %}
-            {% if paginator.page == 1 %}
-                <span class="disabled"><i class="fa fa-angle-double-left"></i></span>
-            {% else %}
-                <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-double-left"></i></a>
-            {% endif %}
-        {% endif %}
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>index</title></head>
+<body><div id="content">
+<h1>Chau Nguyen</h1>
+<h2>Work</h2>
+<ul>
+<li>algorithm and software engineer</li>
+<li>fluent in C++ and comfortable around Node.js</li>
+<li>experience in routing and navigation systems</li>
 
-        <!-- previous link -->
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-left"></i></a>
-        {% else %}
-            <span class="disabled"><i class="fa fa-angle-left"></i></span>
-        {% endif %}
+</ul>
+<h2>Life</h2>
+<ul>
+<li>at home in Berlin, Karlsruhe, Darmstadt, Kyoto</li>
+<li>loves dance and popping</li>
+<li>(ex-)member of Team Combo, Karlsruhe and Egoistic Dancers, Kyoto</li>
 
-        <!-- number links -->
-        {% capture start %}
-            {{ paginator.page | minus: 3 }}
-        {% endcapture %}
+</ul>
+<h2>Short CV</h2>
+<ul>
+<li>2015 - now: backend developer at Mapbox Directions and OSRM</li>
+<li>2010 - 2017: computer science (bachelor + master) at Karlsruhe Institute of Technology (KIT)</li>
+<li>2014: 6 months full-time research internship at Philips Healthcare</li>
+<li>2013/14: 6 months full-time IT internship at CCS in China</li>
 
-        {% for i in (1..paginator.total_pages) limit: 5 offset: start %}
-            {% if i == paginator.page %}
-                <span class="disabled">{{ i }}</span>
-            {% else %}
-                <a href="/page/{{ i }}">{{ i }}</a>
-            {% endif %}
-        {% endfor %}
+</ul>
+<h2>Projects</h2>
+<ul>
+<li>master thesis: <a href='https://i11www.iti.kit.edu/_media/teaching/theses/ma-nguyen.pdf'>Engineering Multimodal Transit Route Planning</a></li>
+<li><a href='http://thrill.github.io/'>Thrill</a>, a C++ framework for big data batch computations</li>
+<li>bachelor thesis: <a href='http://i11www.iti.uni-karlsruhe.de/_media/teaching/theses/ba_chaunguyen.pdf'>Regular Augmentations of Planar Graphs with Low Degree</a></li>
+<li>Lauffeuer, a communication app for use in catastrophy scenarios, awarded 2nd place at national Microsoft Imagine Cup - Windoes Phone and 2nd place at Zukunftspreis Kommunikation 2012</li>
 
-        <!-- next link -->
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="fa fa-angle-right"></i></a>
-        {% else %}
-            <span class="disabled"><i class="fa fa-angle-right"></i></span>
-        {% endif %}
+</ul>
+<h2>Computer Science</h2>
+<ul>
+<li>founder of <a href='http://www.zml.kit.edu/science-camp-informatik.php'>Science Camp Informatik</a> at KIT to offer coding summer camps to high school girls</li>
 
-        <!-- last page link -->
-        {% if paginator.total_pages > 3 %}
-            {% if paginator.page == paginator.total_pages %}
-                <span class="disabled"><i class="fa fa-angle-double-right"></i></span>
-            {% else %}
-                <a href="{{ site.baseurl | replace: '//', '/' }}/page/{{paginator.total_pages}}"><i class="fa fa-angle-double-right"></i></a>
-            {% endif %}
-        {% endif %}
-    </div>
-{% endif %}
+</ul>
+<h2>Contact</h2>
+<ul>
+<li><a href='https://www.linkedin.com/in/huyen-chau-nguyen-a3740b5b/'>LinkedIn</a></li>
+
+</ul>
+</div>
+</body>
+</html>
